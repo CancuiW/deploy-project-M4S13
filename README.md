@@ -39,3 +39,22 @@ Your assignment page on Canvas should contain instructions for submitting this p
 - Research how to avoid storing passwords as is in your array database.
 - Research how to grant access to `GET /api/users` only those clients that are registered and logged in.
 - Create a front-end piece inside the project containing a register/login form and the means to display users.
+
+
+instruction:
+1:npx gitignore node
+2:npm init -y
+3:npx eslint --init
+4:npm i -D nodemon
+5:add---"start": "node index.js",
+     ---"server":"nodemon index.js"
+     in the "scripts"
+6:npm i express cors helmet dotenv
+7:create a .env file
+      PORT=9001
+      NODE_ENV=development
+8:in index.js
+     require('dotenv').config()
+     console.log(process.env.PORT,process.env.NODE_ENV)
+  terminal:npm start
+  ------return 9001  development
